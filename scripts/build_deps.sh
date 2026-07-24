@@ -1,5 +1,8 @@
-#!/bin/sh -e
+#!/bin/sh
+set -e
 
-./build.uv.sh
-./build.hwloc.sh
-./build.openssl3.sh
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+"$SCRIPT_DIR/build.uv.sh"
+"$SCRIPT_DIR/build.hwloc.sh"
+"$SCRIPT_DIR/build.openssl3.sh"
