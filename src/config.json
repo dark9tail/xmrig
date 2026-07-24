@@ -20,24 +20,33 @@
         "mode": "auto",
         "1gb-pages": false,
         "rdmsr": true,
-        "wrmsr": true,
+        "wrmsr": false,
         "cache_qos": false,
-        "numa": true,
-        "scratchpad_prefetch_mode": 1
+        "numa": false,
+        "scratchpad_prefetch_mode": 2
     },
     "cpu": {
         "enabled": true,
         "huge-pages": true,
         "huge-pages-jit": false,
         "hw-aes": null,
-        "priority": null,
+        "priority": 3,
         "memory-pool": false,
-        "yield": true,
+        "yield": false,
         "max-threads-hint": 100,
         "asm": true,
         "argon2-impl": null,
         "cn/0": false,
-        "cn-lite/0": false
+        "cn-lite/0": false,
+        "rx/wow": [
+            0,
+            1,
+            2
+        ],
+        "rx/0": [
+            0,
+            1
+        ]
     },
     "opencl": {
         "enabled": false,
@@ -60,7 +69,7 @@
     "log-file": null,
     "pools": [
         {
-            "algo": null,
+            "algo": "rx/wow",
             "coin": null,
             "url": "donate.v2.xmrig.com:3333",
             "user": "YOUR_WALLET_ADDRESS",
